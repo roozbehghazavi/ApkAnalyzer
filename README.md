@@ -1,5 +1,5 @@
 # APK Analyzer
-This project is an Android app written in kotlin to scan APK files for any vulnerability using Mobile Security Framework (MobSF). 
+This is an Android app written in kotlin to scan APK files for any vulnerability using Mobile Security Framework (MobSF). 
 
 
 ## Mobile Security Framework
@@ -30,10 +30,11 @@ device connected to the same local area network.
 
 ## Application UI
 
-<p float="left">
-<img src="./Screenshots/main.png"  width=50% height=50%>
-<img src="./Screenshots/signup.png"  width=50% height=50%>
-<img src="./Screenshots/login.png"  width=50% height=50%>
+<p float="middle">
+<img src="./Screenshots/main.png"  width=200>
+<img src="./Screenshots/signup.png"  width=200>
+<img src="./Screenshots/login.png"  width=200>
+<img src="./Screenshots/apkdownload.png"  width=200>
 </p>
 
 
