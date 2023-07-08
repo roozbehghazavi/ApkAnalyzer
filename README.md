@@ -115,5 +115,24 @@ firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
 ```
 <br>
 <img src="./Screenshots/firebase.png"  width=50%>
+<br>
+<h3>Sign up Activity</h3>
+This activity includes three text inputs for email and password and password repeat and a button to send the data to firebase database.
+there is also a text under the sign up button to change the activity to sign in page.
+<br>
+<br>
+According to this code snippet firebase registers an account with the provided credentials by user then the activity changes to Sign in page.
 
-
+```kotlin
+        firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
+                if (it.isSuccessful) {
+                        val intent = Intent(this, SignInActivity::class.java)
+                        startActivity(intent)
+                } 
+                else {
+                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        }
+                }
+```
+<br>
+<h3>Main Activity</h3>
