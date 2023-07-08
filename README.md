@@ -136,3 +136,66 @@ According to this code snippet firebase registers an account with the provided c
 ```
 <br>
 <h3>Main Activity</h3>
+This activity include main features of the app for example: choosing a file from storage , Parsing APK Metadata such as package name or version , Intracting with REST API endpoints using OkHttpClient for uploading files or static analyzing or downloding reports , handling user permissions and etc.
+<br>
+<br>
+<h3>APK Download Activity</h3>
+The purpose of the ApkDownload activity is to provide functionality related to downloading APK files using web scraping methods.
+We used Jsoup and webdriver for intracting with the evozi.app website in the background and finding the download link for the provided package name.
+
+```kotlin
+    private fun processPackageName(packageName: String) {
+        WebDriverManager.chromedriver().setup()
+
+        val options = ChromeOptions()
+        options.addArguments("--headless")
+        options.addArguments("--disable-gpu")
+        options.addArguments("--no-sandbox")
+        options.addArguments("--disable-dev-shm-usage")
+
+        val driver = ChromeDriver(options)
+
+        driver.get("https://apps.evozi.com/apk-downloader/")
+
+        val inputElement = driver.findElement(By.id("IjUggSZkjlWSRZqbo"))
+        inputElement.sendKeys(packageName)
+
+        val updatedHtml = driver.pageSource
+
+        val document = Jsoup.parse(updatedHtml)
+
+        // Extract information from the parsed document as needed
+        val downloadButton = document.select("button#TZBFjPrMGb")
+        if (downloadButton.isNotEmpty()) {
+            val buttonElement = driver.findElement(By.id("TZBFjPrMGb"))
+            buttonElement.click()
+        } else {
+            println("Download button not found.")
+        }
+
+        driver.quit()
+    }
+```
+<br>
+<br>
+
+## Dynamic Analyzer
+
+Android Emulator image with Google Play Store is considered as production image and you cannot use that with MobSF. Create an Android Virtual Device (AVD) without Google Play Store. Do not start the AVD from Android Studio, instead start the AVD with writable system using emulator command line options.
+For that, add your Android SDK emulator directory to PATH.
+<br>
+<h3>Run Android Virtual Device (AVD)</h3>
+Run an AVD before starting MobSF using emulator command line options.
+
+```bash
+$ emulator -avd <non_production_avd_name> -writable-system -no-snapshot
+```
+<br>
+Everything will be configured automatically at runtime. MobSF requires AVD version 5.0 to 9.0 for dynamic analysis. We recommend using Android 7.0 and above.
+Only Android images upto API 28 are supported!
+<br>
+<br>
+<p float="middle">
+<img src="./Screenshots/mobsfdynamic.png"  width=40%>
+<img src="./Screenshots/mobsfemu.png"  width=40%>
+</p>
