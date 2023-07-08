@@ -55,6 +55,7 @@ check this link: https://mobsf.github.io/docs/#/requirements
 <br>
 <h3>Installation steps</h3>
 Please make sure that all the requirements mentioned are installed first.<br>
+<br>
 
 Linux/Mac
 ```bash
@@ -69,7 +70,6 @@ cd Mobile-Security-Framework-MobSF
 setup.bat
 ```
 <br>
-<br>
 <h3>Running MobSF</h3>
 Linux/Mac
 
@@ -81,6 +81,7 @@ Windows
 ```bash
 run.bat 127.0.0.1:8000
 ```
-
+<br>
+<h2>Android App Structure</h2>
 
 
