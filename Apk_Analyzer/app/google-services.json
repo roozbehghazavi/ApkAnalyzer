@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690407715587",
+    "project_id": "mobsf-bbc8b",
+    "storage_bucket": "mobsf-bbc8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690407715587:android:df002b7171d59886ac2f36",
+        "android_client_info": {
+          "package_name": "com.codingstuff.loginandsignup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690407715587-g7hl5avo3vm115vfsesktt26vf7tv2ml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr6n2svuw70QFE5wifqhJMgy0-a9U5bVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690407715587-g7hl5avo3vm115vfsesktt26vf7tv2ml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
