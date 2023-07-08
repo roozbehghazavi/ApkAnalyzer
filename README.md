@@ -37,15 +37,50 @@ version, permissions, and any vulnerabilities that were discovered.
 </p>
 
 ## MobSF Installation
+<h3>Easy Setup</h3>
 For easy setup you just need to execute these two commands:
+
 ```bash
 docker pull opensecurity/mobile-security-framework-mobsf
 docker run -it --rm -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
 ```
 If you need Dynamic Analysis, do not setup MobSF inside Docker or Virtual Machine instead use this steps:
-
-First of all you need to install requirements for your appropriate operating system.
+<br>
+<br>
+<h3>Requirements</h3>
+First of all you need to install requirements for your appropriate operating system.<br>
 check this link: https://mobsf.github.io/docs/#/requirements 
+
+<br>
+<br>
+<h3>Installation steps</h3>
+Please make sure that all the requirements mentioned are installed first.<br>
+
+Linux/Mac
+```bash
+git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
+cd Mobile-Security-Framework-MobSF
+./setup.sh
+```
+Windows
+```bash
+git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
+cd Mobile-Security-Framework-MobSF
+setup.bat
+```
+<br>
+<br>
+<h3>Running MobSF</h3>
+Linux/Mac
+
+```bash
+./run.sh 127.0.0.1:8000
+```
+
+Windows
+```bash
+run.bat 127.0.0.1:8000
+```
 
 
 
