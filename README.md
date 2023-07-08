@@ -1,10 +1,11 @@
 # APK Analyzer
 This is an Android app written in kotlin to scan APK files for any vulnerability using Mobile Security Framework (MobSF). 
-
-
+<br>
+<br>
 ## Mobile Security Framework
 Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing static and dynamic analysis. MobSF support mobile app binaries (APK, XAPK, IPA & APPX) along with zipped source code and provides REST APIs for seamless integration with your CI/CD or DevSecOps pipeline. The Dynamic Analyzer helps you to perform runtime security assessment and interactive instrumented testing.
-
+<br>
+<br>
 ## Description
 In this project we are going to develop a mobile security tool that will be used to download and analyze
 Android application packages (APKs). The tool will be based on the Mobile
@@ -24,10 +25,8 @@ and running the APKs in an emulator to observe the behavior of the application.
 Once the analysis is complete, the tool will use the REST API to generate a report of the
 analysis. This report will include details such as the application’s package name, target SDK
 version, permissions, and any vulnerabilities that were discovered.
-The message is usually sent to the target computer by a program executed on
-device connected to the same local area network.
-
-
+<br>
+<br>
 ## Application UI
 
 <p float="middle">
@@ -37,6 +36,16 @@ device connected to the same local area network.
 <img src="./Screenshots/apkdownload.png"  width=200>
 </p>
 
+## MobSF Installation
+For easy setup you just need to execute these two commands:
+```bash
+docker pull opensecurity/mobile-security-framework-mobsf
+docker run -it --rm -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
+```
+If you need Dynamic Analysis, do not setup MobSF inside Docker or Virtual Machine instead use this steps:
+
+First of all you need to install requirements for your appropriate operating system.
+check this link: https://mobsf.github.io/docs/#/requirements 
 
 
 
