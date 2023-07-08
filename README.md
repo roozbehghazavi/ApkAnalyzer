@@ -1,6 +1,7 @@
 # APK Analyzer
 This project is an Android app written in kotlin to scan APK files for any vulnerability using Mobile Security Framework (MobSF). 
 
+
 ## Mobile Security Framework
 Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing static and dynamic analysis. MobSF support mobile app binaries (APK, XAPK, IPA & APPX) along with zipped source code and provides REST APIs for seamless integration with your CI/CD or DevSecOps pipeline. The Dynamic Analyzer helps you to perform runtime security assessment and interactive instrumented testing.
 
@@ -28,9 +29,12 @@ device connected to the same local area network.
 
 
 ## Application UI
+
+<p float="left">
 <img src="./Screenshots/main.png"  width=50% height=50%>
 <img src="./Screenshots/signup.png"  width=50% height=50%>
 <img src="./Screenshots/login.png"  width=50% height=50%>
+</p>
 
 
 
