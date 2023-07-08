@@ -82,6 +82,38 @@ Windows
 run.bat 127.0.0.1:8000
 ```
 <br>
+<img src="./Screenshots/mobsf.png"  width=50%>
+<br>
 <h2>Android App Structure</h2>
+This application consist of 5 different activities.
+LaunchScreen Activity , Sign up Activity , Sign in Activity , Main Activity , APKDownload Activity.
+<br>
+<h3>LaunchScreen Activity</h3>
+A splash screen is displayed briefly when the app is launched then after 3 seconds the activity changes to Sign in page.<br>
+
+```kotlin
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 3000) // 3000 is the delayed time in milliseconds.
+```
+<br>
+<h3>Sign in Activity</h3>
+This activity includes a pair of text inputs for email and password and a button to send the data to firebase database.
+there is also a text under the sign in button to change the activity to sign up page.
+<br>
+<br>
+According to this code snippet if the provided credentials by the user is accepted thus user logs in and activity changes to main activity.
+
+```kotlin
+firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
+      if (it.isSuccessful) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+```
+<br>
+<img src="./Screenshots/firebase.png"  width=50%>
 
 
